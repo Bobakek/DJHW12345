@@ -18,11 +18,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from task4 import views
+from task5 import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'),  # Главная страница
-    path('shop/', views.shop, name='shop'),  # Магазин
-    path('cart/', views.cart, name='cart'),  # Корзина
+    # path('admin/', admin.site.urls),
+    # path('', views.index, name='index'),  # Главная страница
+    # path('shop/', views.shop, name='shop'),  # Магазин
+    # path('cart/', views.cart, name='cart'),  # Корзина
+    path('', views.sign_up_by_html, name='html_sign_up'), #
+    path('django_sign_up/', views.sign_up_by_django, name='django_sign_up'),
 ]
